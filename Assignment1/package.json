@@ -1,0 +1,25 @@
+{
+  "name": "assignment1",
+  "version": "1.0.0",
+  "description": "this is kavita",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-kavita2004/Namaste-React.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "D kavita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/D-kavita2004/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/D-kavita2004/Namaste-React#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
