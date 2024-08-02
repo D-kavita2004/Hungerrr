@@ -1,0 +1,47 @@
+
+.res-card, .shimmer-card{
+   height: 320px;
+   width: 240px;
+   background-color: rgb(255,204,0);
+   border-radius: 18px;
+   border: 2px solid black;
+   margin: 15px;
+   overflow: hidden;
+   box-shadow: 2px 2px 4px 4px #999696;
+}
+.res-card > .img-container{
+   width: 100%;
+   height: 60%;
+   margin-bottom:6px;
+
+}
+.img-container img{
+   width: 100%;
+   height: 100%;
+   border-radius: 18px;
+}
+.res-details{
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+   flex-direction: column;
+   padding:0 10px;
+   flex-wrap: wrap;
+   width: 100%;
+}
+.res-details div{
+   margin: 2px;
+}
+.res-details .info{
+   display: flex;
+   justify-content: space-between;
+}
+
+.res-details > .hotel-name, .cuisines, .location{
+   margin-bottom: 2.5px;
+   font-weight: bolder;
+   text-align: center;
+}
+.res-card:hover{
+   box-shadow: 4px 4px 6px 6px #747373
+}

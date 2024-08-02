@@ -1,0 +1,49 @@
+#header{
+   height: auto;
+   width:100vw;
+   overflow: hidden;
+}
+#nav-items{
+   background-color: rgb(255,204,0);
+   display:flex;
+   align-items: center;
+   justify-content:space-between;
+   width: 100%;
+}
+#nav-items > #logo{
+   padding-left: 3vmin;
+}
+#nav-items ul{
+   display: flex;
+   align-items: center;
+   justify-content:space-between;
+   /* background-color: aqua; */
+   width: 55%;
+}
+#nav-items ul li{
+   list-style-type: none;
+   font-size: 4vmin;  
+}
+#cart{
+   /* background-color: aqua; */
+   width: 8vmin;
+   height: 6.5vmin;
+}
+#menu{
+   display: none;
+}
+#nav-items a{
+   text-decoration: none;
+   color:black;
+   font-weight: bolder;
+   font-style: italic;
+}
+#logo{
+   height: 11vmin;
+   width: 11vmin;
+}
+nav li a:hover{
+   font-size: 4.5vmin;
+   transition: 0.3s;
+   text-shadow: 1px 1px 1px #000;
+}

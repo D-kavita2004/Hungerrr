@@ -1,0 +1,40 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.app{
+   width: 100vw;
+   height: 100vh;
+   overflow-x: hidden;
+}
+#main{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   overflow-x: hidden;
+   width: 100%;
+}
+#main-heading{
+   margin-top: 10px;
+   margin-bottom: 10px;
+   font-size: 4.5vmin;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+@media (max-width:550px) {
+   #nav-items ul{
+      width: 80%;
+   }
+   #logo{
+      height: 15vmin;
+      width: 15vmin;
+   }
+   #nav-items a{
+      font-size: 5.2vmin;
+   }
+}

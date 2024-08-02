@@ -1,0 +1,21 @@
+#res-area{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+#res-container{
+   height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 85%;
+}
+#filter-section{
+   display:flex;
+   justify-content: space-evenly;
+   align-items: center;
+   width: 100%;
+}

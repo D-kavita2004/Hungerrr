@@ -1,0 +1,20 @@
+ #shimmer-area{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+#shimmer-container{
+   height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 85%;
+}
+.shimmer-card{
+   background-color: #f1eeee;
+   box-shadow: 0px 0px 2px 2px rgb(185, 183, 183);
+   border: none;
+}
