@@ -43,8 +43,8 @@ const RestaurentArea = ()=>{
     setUpdateList(filtered_list);
   }
   useEffect(() => {
-    console.log("UpdateList:", UpdateList);
-    console.log(ListOfRestaurents);
+    // console.log("UpdateList:", UpdateList);
+    // console.log(ListOfRestaurents);
   }, [UpdateList]);
 
   async function fetchData(){
@@ -56,7 +56,7 @@ const RestaurentArea = ()=>{
           const res = await response.json();
           const cards = res?.data?.success?.cards;
           const lastIndex = cards?.length - 1;
-          console.log(lastIndex);
+          // console.log(lastIndex);
           
           const restaurents = cards[lastIndex]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
           setListOfRestaurents(restaurents);

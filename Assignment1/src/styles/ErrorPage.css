@@ -1,0 +1,28 @@
+#error{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color:rgb(245, 245, 231);
+   width: 100vw;
+   height: 100vh;
+   flex-direction: column;
+}
+#err-msg{
+   margin-bottom: 120px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+#err-msg > *{
+   margin: 10px;
+}
+#err-btn{
+   width: 20vmin;
+   height: 8vmin;
+   border-radius: 10px;
+   font-weight: bold;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+   font-size: large;
+   background-color: rgb(255,204,0);
+}

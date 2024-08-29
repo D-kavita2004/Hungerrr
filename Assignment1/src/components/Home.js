@@ -1,12 +1,11 @@
-import HeaderComponent from "./HeaderComponent";
-import BodyComponent from "./BodyComponent";
-
+import MainHeading from "./MainHeading";
+import RestaurentArea from "./RestaurentArea";
 const Home = ()=>{
    return (
-      <div className="app">
-         <HeaderComponent/>
-         <BodyComponent/>
-      </div>
-   );
+      <main id="main">
+         <MainHeading/>
+         <RestaurentArea/>
+      </main>
+   )
 }
 export default Home;
