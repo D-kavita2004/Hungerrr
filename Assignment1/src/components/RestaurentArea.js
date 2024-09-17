@@ -3,6 +3,7 @@ import cardDataList from "../utils/MockData";
 import { useEffect, useState } from "react";
 import ShimmerUI from "./shimmerUI";
 import "../styles/RestaurentArea.css";
+import {Link} from "react-router-dom";
 
 
 const RestaurentArea = ()=>{
@@ -82,25 +83,29 @@ const RestaurentArea = ()=>{
 
     <div id ="res-area">
           <div id="filter-section">
-            <div id="search">
-                  <input type="text"  placeholder="Restaurents, cuisines" value={SearchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
-                  <button id="search-btn" onClick={search}>Search</button>
-            </div>
-            <div id="pure-veg">
-                  <button className="filter" onClick={pureVegRes}>Pure Veg</button>
-            </div>
-            <div id="Non-veg">
-                  <button className="filter" onClick={nonVegRes}>Non Veg</button>
-            </div>
-           <div id="Top-Rated">
-                  <button className="filter" onClick={topRatedRestaurents}>Top Rated Restaurents</button>
-           </div>
+                <div id="search">
+                      <input type="text"  placeholder="Restaurents, cuisines" value={SearchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
+                      <button id="search-btn" onClick={search}>Search</button>
+                </div>
+                <div className="filter-me">
+                      <div id="pure-veg">
+                            <button className="filter" onClick={pureVegRes}>Pure Veg</button>
+                      </div>
+                      <div id="Non-veg">
+                            <button className="filter" onClick={nonVegRes}>Non Veg</button>
+                      </div>
+                    <div id="Top-Rated">
+                            <button className="filter" onClick={topRatedRestaurents}>Top Rated Restaurents</button>
+                    </div>
+                </div>
           </div>
         <div id="res-container">
             {
              (ListOfRestaurents.length)===0 ? 
              (<ShimmerUI/>):(UpdateList.map((res,index)=>{
-              return <RestaurentCard  key={res.info.id} resData={res.info}/>
+              return (
+                <Link id="cardLink" to = {"/Restaurents/" + res.info.id}  key={res.info.id} ><RestaurentCard resData={res.info}/></Link>
+              )
               }) )             
             }
       </div>
