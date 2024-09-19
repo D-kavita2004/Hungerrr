@@ -6,11 +6,15 @@ import { useParams } from "react-router-dom";
 import { MENU_URL } from "../utils/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faStar,faAngleDown,faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
 const ResMenu = () => {
    const [ResInfo, setResInfo] = useState(null);
    const [SelectedOption,setSelectedOption] = useState("ALL");
    const {resId} = useParams();
+
+   const {addToCart} = useContext(CartContext);
 
    //Fetching the menu item of a restaurent
    const fetchMenu = async () => {
@@ -43,15 +47,15 @@ const ResMenu = () => {
    }
 
    const { name, cloudinaryImageId, avgRatingString, cuisines, costForTwo,areaName,city,veg } = ResInfo[2]?.card?.card?.info || {};
-
+   const RestaurentName = name;
    let lastIndex = ResInfo.length - 1;
    const allCards = ResInfo[lastIndex]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
    // console.log("allcards",allCards);
-   console.log("ResInfo",ResInfo);
+   // console.log("ResInfo",ResInfo);
 
    let lastmenu = (allCards.length-1)-1;
    const cardCategories = allCards.slice(2,lastmenu) || [];
-   console.log("card categories",cardCategories);
+   // console.log("card categories",cardCategories);
 
    let filtered_list = [];
 
@@ -103,7 +107,7 @@ const ResMenu = () => {
    return (
      <div className="resCard">
             <div id="res-menu">
-                  <h1>{name}</h1>
+                  <h1>{RestaurentName}</h1>
                   <div className="res-view">
                         <div className="res-text">
                                  <p><FontAwesomeIcon icon={faStar} style={{color: "#27b10b",}}/>{" "+avgRatingString}</p>
@@ -145,13 +149,13 @@ const ResMenu = () => {
                            {/* we are destructuring only when the item cards are available */}
                            <div  id={index}>
                            {category?.card?.card?.itemCards ? (
-                              <div className="item">
+                              <div className="item" key={index}>
                                  {filterItems(category?.card?.card?.itemCards).map((item, itemIndex) => {
                                     const {name,isVeg,imageId,price,ratings} = item?.card?.info;
 
                                     return (
                                       <div className="item-container" >
-                                                   <div className="item-text">
+                                                <div className="item-text">
                                                    <p>{(isVeg)?"🟢 Vegetarian":"🔴 Non-Vegetarian"}</p>
                                                    <h3 key={itemIndex}>{name}</h3>
                                                    <p>{" ₹ " + price/100}</p>
@@ -162,6 +166,7 @@ const ResMenu = () => {
       
                                                 <div className="item-image">
                                                    <img className="item-pic" src={imageId?CARD_IMAGE_URL + imageId:CARD_IMAGE_URL + cloudinaryImageId} alt={name} />
+                                                   <button className="cart-btn" onClick={() => addToCart(item?.card?.info,RestaurentName)}>Add</button>
                                                 </div>
                                       </div>
                                     )

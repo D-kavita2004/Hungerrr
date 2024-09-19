@@ -1,6 +1,6 @@
 import RestaurentCard from "./RestaurentCard";
 import cardDataList from "../utils/MockData";
-import { useEffect, useState } from "react";
+import { useEffect,useState } from "react";
 import ShimmerUI from "./shimmerUI";
 import "../styles/RestaurentArea.css";
 import {Link} from "react-router-dom";
@@ -11,6 +11,10 @@ const RestaurentArea = ()=>{
   const [UpdateList, setUpdateList] = useState([]);
   const [SearchText,setSearchText] = useState("");
 
+  useEffect(() => {
+    setListOfRestaurents(cardDataList);
+    setUpdateList(cardDataList);
+  }, []);
   //Top rated Restaurents
   function topRatedRestaurents(){
     const filtered_list = ListOfRestaurents.filter((res)=>{
@@ -43,41 +47,45 @@ const RestaurentArea = ()=>{
     })
     setUpdateList(filtered_list);
   }
-  useEffect(() => {
-    // console.log("UpdateList:", UpdateList);
-    // console.log(ListOfRestaurents);
-  }, [UpdateList]);
+  // useEffect(() => {
+  //   // console.log("UpdateList:", UpdateList);
+  //   // console.log(ListOfRestaurents);
+  // }, [UpdateList]);
 
-  async function fetchData(){
-      try{
-        const response = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=28.7040592&lng=77.10249019999999");
-        const contentType = response.headers.get('content-type');
+  // async function fetchData(){
+  //     try{
+  //       const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+  //       const formatted = await response.json();
+  //       console.log(formatted);
+  //       const contentType = response.headers.get('content-type');
 
-        if(contentType.includes('application/json')){
-          const res = await response.json();
-          const cards = res?.data?.success?.cards;
-          const lastIndex = cards?.length - 1;
-          // console.log(lastIndex);
+  //       if(contentType.includes('application/json')){
+  //         const res = await response.json();
+  //         console.log(response);
+  //         const cards = res?.data?.success?.cards;
+  //         const lastIndex = cards?.length - 1;
+  //         // console.log(lastIndex);
           
-          const restaurents = cards[lastIndex]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
-          setListOfRestaurents(restaurents);
-          setUpdateList(restaurents);
-        }
-        else{
-          setListOfRestaurents(cardDataList);
-          setUpdateList(cardDataList);
-          console.log(cardDataList);
-        }
+  //         const restaurents = cards[lastIndex]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
+  //         setListOfRestaurents(restaurents);
+  //         setUpdateList(restaurents);
+  //       }
+  //       else{
+  //         setListOfRestaurents(cardDataList);
+  //         setUpdateList(cardDataList);
+  //         console.log(cardDataList);
+  //       }
 
-        }
-      catch{
-        console.log("failed to fetch");
-      }
-  }
+  //       }
+  //     catch{
+  //       console.log("failed to fetch");
+  //     }
+  // }
 
-    useEffect(()=>{
-      fetchData();
-    },[])
+    // useEffect(()=>{
+
+    //   // fetchData();
+    // },[])
 
    return (
 

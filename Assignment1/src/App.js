@@ -4,14 +4,18 @@ import Home from "./components/Home";
 import About from "./components/About";
 import ErrorPage from "./components/ErrorPage";
 import HeaderComponent from "./components/HeaderComponent";
+import Mycart from "./components/MyCart";
 import ResMenu from "./components/ResMenu";
+import { CartProvider } from "./components/CartContext";
 import { BrowserRouter,Routes,Route,Outlet } from "react-router-dom";
 
 const AppLayout = ()=>{
    return(
       <div id = "app">
-         <HeaderComponent/>
-         <Outlet/>
+         <CartProvider>
+            <HeaderComponent/>
+            <Outlet/>
+         </CartProvider>
       </div>
    )
 }
@@ -23,6 +27,7 @@ const AppRouterComponent = () =>{
                <Route path="/" element={<Home/>}></Route>
                <Route path="/Home" element={<Home/>}></Route>
                <Route path="/About" element={<About/>}></Route>
+               <Route path="/My-Cart" element={<Mycart/>}></Route>
                <Route path="/Restaurents/:resId" element={<ResMenu/>}></Route>
             </Route>
             <Route path="*" element={<ErrorPage/>} ></Route>

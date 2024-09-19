@@ -2,6 +2,7 @@
    height: auto;
    width:100vw;
    overflow: hidden;
+   background-color: antiquewhite;
 }
 #nav-items{
    background-color: rgb(255,204,0);
@@ -9,6 +10,7 @@
    align-items: center;
    justify-content:space-between;
    width: 100%;
+   /* padding-right: 20px; */
 }
 #nav-items > #logo{
    padding-left: 3vmin;
@@ -16,18 +18,19 @@
 #nav-items ul{
    display: flex;
    align-items: center;
-   justify-content:space-between;
+   justify-content:space-evenly;
    /* background-color: aqua; */
-   width: 55%;
+
+   width: 45%;
 }
 #nav-items ul li{
    list-style-type: none;
-   font-size: 4vmin;  
+   font-size: 4.2vmin;  
 }
 #cart{
    /* background-color: aqua; */
-   width: 8vmin;
-   height: 6.5vmin;
+   width: 10vmin;
+   height: 7vmin;
 }
 #menu{
    display: none;
@@ -39,11 +42,17 @@
    font-style: italic;
 }
 #logo{
-   height: 11vmin;
-   width: 11vmin;
+   height: 12vmin;
+   width: 12vmin;
 }
 nav li a:hover{
    font-size: 4.5vmin;
    transition: 0.3s;
    text-shadow: 1px 1px 1px #000;
+}
+@media (max-width:800px) {
+   #logo{
+      height: 15vmin;
+      width: 15vmin;
+   }
 }

@@ -1368,6 +1368,587 @@ const cardDataList = [
         "text": "RESTAURANT_MENU",
         "type": "DEEPLINK"
     }
+},
+{
+    "info": {
+      "id": "253731",
+      "name": "McDonald's",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/8/8fbd9f14-1582-4423-ae2c-3cd44fc2325f_253731.jpg",
+      "locality": "Sector 3",
+      "areaName": "Rohini",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "American"
+      ],
+      "avgRating": 4.5,
+      "parentId": "630",
+      "avgRatingString": "4.5",
+      "totalRatingsString": "8.8K+",
+      "sla": {
+        "deliveryTime": 28,
+        "lastMileTravel": 2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25-30 mins",
+        "lastMileTravelString": "2.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-17 23:45:00",
+        "opened": true
+      },
+    }
+},
+{
+    "info": {
+      "id": "622616",
+      "name": "Domino's Pizza",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/13/d18f0582-c96b-4794-8ce8-fe272b707c00_622616.JPG",
+      "locality": "3rd Sector",
+      "areaName": "Rohini",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Pizzas",
+        "Italian",
+        "Pastas",
+        "Desserts"
+      ],
+      "avgRating": 4.4,
+      "parentId": "2456",
+      "avgRatingString": "4.4",
+      "totalRatingsString": "1.0K+",
+      "sla": {
+        "deliveryTime": 25,
+        "lastMileTravel": 0.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "0.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 01:59:00",
+        "opened": true
+      },
+
+  },
+},
+{
+    "info": {
+      "id": "26723",
+      "name": "KFC",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/69e69c55-d2bb-4207-8310-131fc693f78a_26723.JPG",
+      "locality": "Sector 3",
+      "areaName": "Rohini",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Burgers",
+        "Rolls & Wraps",
+        "Fast Food"
+      ],
+      "avgRating": 4.2,
+      "parentId": "547",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 20,
+        "lastMileTravel": 2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "15-20 mins",
+        "lastMileTravelString": "2.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 05:00:00",
+        "opened": true
+      }
+
+  },
+},
+{
+    "info": {
+      "id": "25182",
+      "name": "BTW",
+      "cloudinaryImageId": "c4ai8pwgz1pemtw8gnpq",
+      "locality": "Rohini",
+      "areaName": "Rohini",
+      "costForTwo": "₹300 for two",
+      "cuisines": [
+        "Street Food",
+        "North Indian",
+        "Sweets"
+      ],
+      "avgRating": 4.2,
+      "parentId": "10314",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "27K+",
+      "sla": {
+        "deliveryTime": 29,
+        "lastMileTravel": 2.1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25-30 mins",
+        "lastMileTravelString": "2.1 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-17 23:00:00",
+        "opened": true
+      }
+  },
+},
+{
+    "info": {
+      "id": "55473",
+      "name": "Pizza Hut",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/d281ae33-578d-482f-a4e2-8cf0d8ee3d58_55473.jpg",
+      "locality": "Sector 10",
+      "areaName": "Rohini",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Pizzas"
+      ],
+      "avgRating": 4.1,
+      "parentId": "721",
+      "avgRatingString": "4.1",
+      "totalRatingsString": "7.2K+",
+      "sla": {
+        "deliveryTime": 32,
+        "lastMileTravel": 2.1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "30-35 mins",
+        "lastMileTravelString": "2.1 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 04:00:00",
+        "opened": true
+      }
+    },
+},
+{
+    "info": {
+      "id": "101657",
+      "name": "NIC Ice Creams",
+      "cloudinaryImageId": "18d8b8fb6bac8063a6fa886e20148110",
+      "locality": "Sector 7",
+      "areaName": "Rohini",
+      "costForTwo": "₹120 for two",
+      "cuisines": [
+        "Ice Cream",
+        "Desserts"
+      ],
+      "avgRating": 4.6,
+      "veg": true,
+      "parentId": "6249",
+      "avgRatingString": "4.6",
+      "totalRatingsString": "12K+",
+      "sla": {
+        "deliveryTime": 19,
+        "lastMileTravel": 1.7,
+        "serviceability": "SERVICEABLE",
+        "slaString": "15-20 mins",
+        "lastMileTravelString": "1.7 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 00:00:00",
+        "opened": true
+      }
+    }
+},
+{
+    "info": {
+      "id": "168043",
+      "name": "Burger Singh (Big Punjabi Burgers)",
+      "cloudinaryImageId": "972a37599772cdc7df93a0855ad87591",
+      "locality": "Rohini",
+      "areaName": "Rohini",
+      "costForTwo": "₹300 for two",
+      "cuisines": [
+        "American",
+        "Fast Food",
+        "Snacks"
+      ],
+      "avgRating": 4.2,
+      "parentId": "375065",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "11K+",
+      "sla": {
+        "deliveryTime": 25,
+        "lastMileTravel": 2.2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "2.2 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 06:00:00",
+        "opened": true
+      }
+    }
+},
+{
+    "info": {
+      "id": "40524",
+      "name": "Bikanervala",
+      "cloudinaryImageId": "nvxmsbuqjqwkbyyradbu",
+      "locality": "Sector 10",
+      "areaName": "Rohini",
+      "costForTwo": "₹300 for two",
+      "cuisines": [
+        "North Indian",
+        "Snacks",
+        "Chaat",
+        "Sweets"
+      ],
+      "avgRating": 4.4,
+      "veg": true,
+      "parentId": "45936",
+      "avgRatingString": "4.4",
+      "totalRatingsString": "28K+",
+      "sla": {
+        "deliveryTime": 22,
+        "lastMileTravel": 2.1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "2.1 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-17 23:45:00",
+        "opened": true
+      }
+    }
+},
+{
+    "info": {
+      "id": "432557",
+      "name": "Bikkgane Biryani",
+      "cloudinaryImageId": "56646c3f698b3c5ae53639c49a4725af",
+      "locality": "Sector 3",
+      "areaName": "Pushpanjali",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Biryani",
+        "Mughlai",
+        "North Indian"
+      ],
+      "avgRating": 4.2,
+      "parentId": "5070",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "3.1K+",
+      "sla": {
+        "deliveryTime": 30,
+        "lastMileTravel": 2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25-30 mins",
+        "lastMileTravelString": "2.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 00:00:00",
+        "opened": true
+      }
+    }
+},
+{
+    "info": {
+      "id": "631821",
+      "name": "Taco Bell",
+      "cloudinaryImageId": "d3b3db238b6448c3f297c851e9d0b96b",
+      "locality": "Unity One Mall",
+      "areaName": "Rohini",
+      "costForTwo": "₹300 for two",
+      "cuisines": [
+        "Mexican",
+        "Fast Food",
+        "Snacks"
+      ],
+      "avgRating": 4.2,
+      "parentId": "1557",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "2.5K+",
+      "sla": {
+        "deliveryTime": 35,
+        "lastMileTravel": 2.1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "35-40 mins",
+        "lastMileTravelString": "2.1 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 04:00:00",
+        "opened": true
+      },
 }
-        ]
+},
+{
+    "info": {
+      "id": "332081",
+      "name": "The Brooklyn Creamery - Healthy Ice Cream",
+      "cloudinaryImageId": "b1b35780a9b1dfeb26d680506d494eaa",
+      "locality": "Sector 2",
+      "areaName": "Rohini",
+      "costForTwo": "₹200 for two",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream",
+        "Healthy Food"
+      ],
+      "avgRating": 4,
+      "veg": true,
+      "parentId": "236673",
+      "avgRatingString": "4.0",
+      "totalRatingsString": "394",
+      "sla": {
+        "deliveryTime": 21,
+        "lastMileTravel": 1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "1.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 00:00:00",
+        "opened": true
+      }
+    }
+},
+{
+    "info": {
+      "id": "341033",
+      "name": "Bakingo",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/5/d2678d03-b7f9-4a8c-a959-a540e18d69f2_341033.JPG",
+      "locality": "Rithala",
+      "areaName": "Rohini",
+      "costForTwo": "₹300 for two",
+      "cuisines": [
+        "Bakery",
+        "Desserts",
+        "Beverages",
+        "Snacks"
+      ],
+      "avgRating": 4.5,
+      "parentId": "3818",
+      "avgRatingString": "4.5",
+      "totalRatingsString": "5.5K+",
+      "sla": {
+        "deliveryTime": 25,
+        "lastMileTravel": 3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "3.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 00:00:00",
+        "opened": true
+      }}
+},
+{
+    "info": {
+      "id": "850492",
+      "name": "The Belgian Waffle Co.",
+      "cloudinaryImageId": "31c298bddfa617332b46c93bb209d572",
+      "locality": "Rohini",
+      "areaName": "Unity Mall",
+      "costForTwo": "₹200 for two",
+      "cuisines": [
+        "Waffle",
+        "Desserts",
+        "Ice Cream",
+        "Beverages"
+      ],
+      "avgRating": 4.4,
+      "veg": true,
+      "parentId": "2233",
+      "avgRatingString": "4.4",
+      "totalRatingsString": "323",
+      "sla": {
+        "deliveryTime": 26,
+        "lastMileTravel": 2.4,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25-30 mins",
+        "lastMileTravelString": "2.4 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 03:00:00",
+        "opened": true
+      }
+    }
+},
+{
+    "info": {
+      "id": "73682",
+      "name": "Biryani Blues",
+      "cloudinaryImageId": "97377e54937c079fe269d744aa66274a",
+      "locality": "Rohini",
+      "areaName": "Rohini",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Biryani",
+        "Hyderabadi",
+        "Lucknowi",
+        "Kebabs",
+        "Desserts",
+        "Beverages"
+      ],
+      "avgRating": 4.3,
+      "parentId": "13813",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "19K+",
+      "sla": {
+        "deliveryTime": 26,
+        "lastMileTravel": 2.1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25-30 mins",
+        "lastMileTravelString": "2.1 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 04:00:00",
+        "opened": true
+      }
+    }
+},
+{
+    "info": {
+      "id": "444780",
+      "name": "Theobroma",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/22/beb04fc8-e89b-47ff-b76e-31703790fc07_444780.jpg",
+      "locality": "Sector 3",
+      "areaName": "Rohini",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Bakery",
+        "Desserts"
+      ],
+      "avgRating": 4.6,
+      "parentId": "1040",
+      "avgRatingString": "4.6",
+      "totalRatingsString": "3.7K+",
+      "sla": {
+        "deliveryTime": 21,
+        "lastMileTravel": 2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "2.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 00:00:00",
+        "opened": true
+      },
+    }
+},
+{
+    "info": {
+      "id": "15846",
+      "name": "Faasos - Wraps, Rolls & Shawarma",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/28/8f93d57a-fce4-4abc-8781-a44d14e45077_15846.JPG",
+      "locality": "Sector 8",
+      "areaName": "Rohini",
+      "costForTwo": "₹200 for two",
+      "cuisines": [
+        "Kebabs",
+        "Fast Food",
+        "Snacks",
+        "American",
+        "Healthy Food",
+        "Desserts",
+        "Beverages"
+      ],
+      "avgRating": 4.3,
+      "parentId": "21809",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "14K+",
+      "sla": {
+        "deliveryTime": 31,
+        "lastMileTravel": 2.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "30-35 mins",
+        "lastMileTravelString": "2.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-17 23:59:00",
+        "opened": true
+      }
+    }
+},
+{
+    "info": {
+      "id": "443492",
+      "name": "EatFit",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/6/38dd14e3-ed86-4469-bb6a-4951307e2030_443492.jpg",
+      "locality": "Sector 7",
+      "areaName": "Rohini",
+      "costForTwo": "₹250 for two",
+      "cuisines": [
+        "Chinese",
+        "Healthy Food",
+        "Tandoor",
+        "Pizzas",
+        "North Indian",
+        "Thalis",
+        "Biryani"
+      ],
+      "avgRating": 4.3,
+      "parentId": "76139",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "2.9K+",
+      "sla": {
+        "deliveryTime": 22,
+        "lastMileTravel": 1.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "1.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 01:00:00",
+        "opened": true
+      }
+    }
+},
+{
+    "info": {
+      "id": "258189",
+      "name": "Great Indian Khichdi by EatFit",
+      "cloudinaryImageId": "6e44fd7f1e5cd9967edfe47c10247671",
+      "locality": "Village Naharpur",
+      "areaName": "Pushpanjali",
+      "costForTwo": "₹200 for two",
+      "cuisines": [
+        "Home Food",
+        "Indian",
+        "North Indian",
+        "Healthy Food",
+        "Snacks",
+        "Desserts",
+        "Rajasthani",
+        "South Indian",
+        "Maharashtrian",
+        "Sweets"
+      ],
+      "avgRating": 4.5,
+      "veg": true,
+      "parentId": "319582",
+      "avgRatingString": "4.5",
+      "totalRatingsString": "3.1K+",
+      "sla": {
+        "deliveryTime": 21,
+        "lastMileTravel": 1.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "1.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-09-18 01:00:00",
+        "opened": true
+      }
+    }
+},
+]
+         
 export default cardDataList

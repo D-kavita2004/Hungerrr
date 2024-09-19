@@ -89,6 +89,21 @@
    height: 100%;
    border-radius: 10px;
 }
+.cart-btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   height: 4.1vmin;
+   padding: 10px;
+   padding-left: 12px;
+   padding-right: 12px;
+   bottom: 30px;
+   left: 40px;
+   font-weight: bolder;
+   background-color: rgb(151, 245, 10);
+   border-radius: 7px;
+}
 .category-title{
    display: flex;
    justify-content: space-between;
