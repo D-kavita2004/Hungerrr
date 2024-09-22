@@ -45,3 +45,10 @@
 .res-card:hover{
    box-shadow: 4px 4px 6px 6px #747373
 }
+@media (max-width:800px) {
+   .res-card, .shimmer-card{
+      height: 270px;
+      width: 200px;
+   }
+   
+}

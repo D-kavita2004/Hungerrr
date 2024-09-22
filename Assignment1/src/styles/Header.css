@@ -2,7 +2,6 @@
    height: auto;
    width:100vw;
    overflow: hidden;
-   background-color: antiquewhite;
 }
 #nav-items{
    background-color: rgb(255,204,0);
@@ -21,11 +20,11 @@
    justify-content:space-evenly;
    /* background-color: aqua; */
 
-   width: 45%;
+   width: 60%;
 }
 #nav-items ul li{
    list-style-type: none;
-   font-size: 4.2vmin;  
+   font-size: 4.5vmin;  
 }
 #cart{
    /* background-color: aqua; */
@@ -42,8 +41,8 @@
    font-style: italic;
 }
 #logo{
-   height: 12vmin;
-   width: 12vmin;
+   height: 13vmin;
+   width: 13vmin;
 }
 nav li a:hover{
    font-size: 4.5vmin;
@@ -52,7 +51,7 @@ nav li a:hover{
 }
 @media (max-width:800px) {
    #logo{
-      height: 15vmin;
-      width: 15vmin;
+      height: 20vmin;
+      width: 20vmin;
    }
 }

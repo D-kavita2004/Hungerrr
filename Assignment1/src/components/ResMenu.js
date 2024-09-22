@@ -8,23 +8,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faStar,faAngleDown,faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
+import { useNavigate } from "react-router-dom";
 
 const ResMenu = () => {
    const [ResInfo, setResInfo] = useState(null);
    const [SelectedOption,setSelectedOption] = useState("ALL");
    const {resId} = useParams();
+   const navigate = useNavigate();
 
-   const {addToCart} = useContext(CartContext);
+   const {addToCart,ShowPop} = useContext(CartContext);
 
    //Fetching the menu item of a restaurent
    const fetchMenu = async () => {
-      const menuDataResponse = await fetch(MENU_URL+resId);
-
-      const contentType = menuDataResponse.headers.get('content-type');
-
-      if (contentType.includes('application/json')) {
-         const menuData = await menuDataResponse.json();
-         setResInfo(menuData.data.cards);
+      
+      try{
+         const menuDataResponse = await fetch(MENU_URL+resId);
+         if (!menuDataResponse.ok) {
+            throw new Error('Network response was not ok');
+         }
+         const contentType = menuDataResponse.headers.get('content-type');
+   
+         if (contentType.includes('application/json')) {
+            const menuData = await menuDataResponse.json();
+            setResInfo(menuData.data.cards);
+         }
+         else {
+            throw new Error('Invalid content-type');
+         }
+      }
+      catch(error){
+         console.log("Somethimg went wrong while fetching the data");
+         navigate("/error")
       }
    }
 
@@ -107,6 +121,7 @@ const ResMenu = () => {
    return (
      <div className="resCard">
             <div id="res-menu">
+            
                   <h1>{RestaurentName}</h1>
                   <div className="res-view">
                         <div className="res-text">
@@ -120,6 +135,7 @@ const ResMenu = () => {
                                  <img className="res-pic" src={CARD_IMAGE_URL + cloudinaryImageId} alt={name} />
                         </div>
                   </div>
+                  
                   <div className="filter-me">
                         <div id="pure-veg">
                               <button className="filter" onClick={vegItems}>Pure Veg</button>
@@ -155,19 +171,21 @@ const ResMenu = () => {
 
                                     return (
                                       <div className="item-container" >
-                                                <div className="item-text">
+                                             <div className="item-text">
                                                    <p>{(isVeg)?"🟢 Vegetarian":"🔴 Non-Vegetarian"}</p>
                                                    <h3 key={itemIndex}>{name}</h3>
                                                    <p>{" ₹ " + price/100}</p>
                                                    <p><FontAwesomeIcon icon={faStar} style={{color: "#27b10b",}}/>{" "+ratings?.
                                                       aggregatedRating?.rating+ "("+ratings?.
                                                       aggregatedRating?.ratingCountV2+ ")"}</p>
-                                                </div>
+                                             </div>
       
-                                                <div className="item-image">
+                                             <div className="item-image">
                                                    <img className="item-pic" src={imageId?CARD_IMAGE_URL + imageId:CARD_IMAGE_URL + cloudinaryImageId} alt={name} />
                                                    <button className="cart-btn" onClick={() => addToCart(item?.card?.info,RestaurentName)}>Add</button>
-                                                </div>
+                                                   {ShowPop?<div className="popUp">Item added to Cart....</div>:null}
+                                                  
+                                             </div>
                                       </div>
                                     )
                                  })}

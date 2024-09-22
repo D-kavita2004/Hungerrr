@@ -3,19 +3,115 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: aqua;
+   flex-direction: column;
+   /* background-color: aqua; */
 }
 .table-container{
-   width: 70%;
-   background-color: bisque;
+   width: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   /* background-color: bisque; */
    margin-top: 70px;
+}
+.bill-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   /* background-color: aqua; */
+   width: 70%;
+   margin-top: 40px;
+   margin-bottom: 50px;
+}
+.bill{
+   margin: 10px;
+   width: 65%;
+   background-color:#F5F5DC;
+   margin-bottom: 20px;
+}
+.ques{
+   font-size: 4vmin;
+}
+.ans{
+   font-size: 3.8vmin;
+}
+#pay-amt{
+   font-weight: bolder;
+}
+.bc{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 15px;
+}
+.place-order-btn{
+   font-size: larger;
+   padding: 8px;
+   border-radius: 8px;
+   background-color: rgb(47, 255, 47);
+   color: black;
+   font-weight: bold;
 }
 .cart-table{
    width: 100%;
    height: 100%;
    border: 1px solid black;
    border-collapse: collapse;
+   background-color: beige;
+   /* background-color: orange; */
 }
-.cart-table > td,th{
+td,th{
+   text-align: center;
    border: 1px solid black;
+   padding: 2px;
+   font-size: large;
+}
+th{
+   padding: 8px;
+   font-size: larger;
+   font-weight: bolder;
+}
+.cart-image{
+   width: 60px;
+   height: 60px;
+}
+.order-placed{
+   position: fixed;
+   z-index: 1000;
+   top: 30%;
+   height: 250px;
+   width: 350px;
+   background-color: aqua;
+   box-shadow: rgba(50, 50, 93, 0.699) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+   border-radius: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+@media (max-width:800px) {
+   .table-container{
+      width: 80%;
+      margin-top: 70px;
+      /* background-color: orange; */
+   }
+   .bill-container{
+      width: 80%;
+   }
+   td,th{
+      font-size:medium;
+   }
+   th{
+      padding: 8px;
+      font-size: medium;
+      font-weight: bolder;
+   }
+}
+@media (min-width:1100px) {
+   .cart-image{
+      width: 90px;
+      height: 75px;
+   }
 }
