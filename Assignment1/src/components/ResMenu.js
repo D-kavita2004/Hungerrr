@@ -3,7 +3,7 @@ import ShimmerUI from "./shimmerUI";
 import { CARD_IMAGE_URL } from "../utils/constants";
 import "../styles/ResMenu.css";
 import { useParams } from "react-router-dom";
-import { MENU_URL } from "../utils/constants";
+// import { MENU_URL } from "../utils/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faStar,faAngleDown,faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
@@ -22,7 +22,7 @@ const ResMenu = () => {
    const fetchMenu = async () => {
       
       try{
-         const menuDataResponse = await fetch(MENU_URL+resId);
+         const menuDataResponse = await fetch(`/swiggy-api?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId=${resId}`);
          if (!menuDataResponse.ok) {
             throw new Error('Network response was not ok');
          }

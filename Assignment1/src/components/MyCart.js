@@ -1,11 +1,13 @@
 import "../styles/MyCart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash,faCheckDouble } from "@fortawesome/free-solid-svg-icons";
 import { CARD_IMAGE_URL } from "../utils/constants";
 import { CartContext } from "./CartContext";
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Mycart = ()=>{
+   const navigate = useNavigate();
    const {cartItems,removeFromCart} = useContext(CartContext);
    const [Show,setShow] = useState(false);
 
@@ -20,6 +22,9 @@ const Mycart = ()=>{
          elem1.style.filter = "none";
          elem2.style.filter = "none";
       },3000);
+      setTimeout(()=>{
+         navigate("/Home");
+      },3010);
    }
 
    let totalPrice = 0;
@@ -73,7 +78,13 @@ const Mycart = ()=>{
                      </div>
                      <button className="place-order-btn" onClick={orderPopUp}>Place Order</button>
                </div>
-         {Show?<div className="order-placed">Order Placed</div>:null}
+         {Show?<div className="order-placed">
+                  <div>
+                        <FontAwesomeIcon icon={faCheckDouble} beatFade style={{color: "#5bcd0e",}} className="double-check"/>
+                  </div>
+                  <div className="order-msg">
+                        Order Placed Successfully !!!
+                  </div></div>:null}
         
       </div>
    )
