@@ -20,6 +20,7 @@ const HeaderComponent = ()=>{
                <li><Link to="/Home">Home</Link></li>
                {/* <li><Link to="/About">About</Link></li> */}
                <li><Link to="/Contact">Contact</Link></li>
+               <li><Link to="/Grocery">Grocery</Link></li>
                <li><Link to="/#" onClick={log}>{check}</Link></li>
               <li><Link to="/My-Cart"><FontAwesomeIcon  id ="cart" icon={faShoppingCart} bounce style={{ color: "#070118" }} /></Link></li>
               {/* <li><FontAwesomeIcon id="menu" icon={faBars} style={{color: "#00040a"}} /></li> */}

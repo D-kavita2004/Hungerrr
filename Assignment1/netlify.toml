@@ -1,9 +1,0 @@
-[build]
-  publish = "build"
-  command = "npm run prodBuild"
-
-[[redirects]]
-  from = "/swiggy-api/*"
-  to = "https://www.swiggy.com/dapi/menu/pl/:splat"
-  status = 200
-  force = true

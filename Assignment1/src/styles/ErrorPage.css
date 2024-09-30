@@ -16,13 +16,14 @@
 }
 #err-msg > *{
    margin: 10px;
+   text-align: center;
+   /* background-color: aqua; */
 }
 #err-btn{
-   width: 20vmin;
-   height: 8vmin;
    border-radius: 10px;
-   font-weight: bold;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
    font-size: large;
+   padding: 8px;
+   font-weight: bolder;
    background-color: rgb(255,204,0);
 }
