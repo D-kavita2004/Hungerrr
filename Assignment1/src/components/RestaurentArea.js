@@ -92,7 +92,7 @@ const RestaurentArea = ()=>{
     <div id ="res-area">
           <div id="filter-section">
                 <div id="search">
-                      <input type="text"  placeholder="Restaurents, cuisines" value={SearchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
+                      <input type="text"  placeholder="Restaurants, cuisines" value={SearchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
                       <button id="search-btn" onClick={search}>Search</button>
                 </div>
                 <div className="filter-me">

@@ -1,0 +1,64 @@
+.contact-page{
+   width: 100%;
+   /* height:calc(100% - 13vmin); */
+   margin-top: 30px;
+   /* background-color: aqua; */
+   color: black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.contact-container{
+   width: 60%;
+   /* background-color: lightcoral; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.contact-container > *{
+   margin: 10px;
+}
+#my-form{
+   background-color: rgba(102, 255, 0, 0.712);
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   border-radius: 15px;
+   box-shadow: 2px 2px 6px 6px green;
+}
+#my-form >*{
+   margin: 12px 0px;
+}
+.field >input{
+   width: 250px;
+   height: 35px;
+}
+.field > label{
+   font-size: larger;
+   font-weight: bolder;
+}
+textarea{
+   width: 250px;
+   height: 80px;
+}
+.contact-heading{
+   font-size: 5.2vmax;
+   font-weight: bolder;
+   /* font-style: italic; */
+}
+@media (max-width:600px) {
+   .contact-container{
+      width: 80%;
+   }
+}
+@media (min-width:600px) {
+   .contact-container{
+      width: 45%;
+   }
+   .contact-heading{
+      font-size: 4.5vmax;
+   }
+}

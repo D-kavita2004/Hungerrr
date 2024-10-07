@@ -34,7 +34,7 @@
 }
 .filter{
    height: 7.2vmin;
-   border-radius: 14px;
+   border-radius: 10px;
    font-weight: bolder;
    padding: 10px;
    background-color: rgb(255,204,0);
@@ -83,8 +83,8 @@
       width: 80%;
    }
    .filter{
-      height: 8.4vmin;
-      font-size: 3.2vmin;
+      height: 8.5vmin;
+      font-size: 3.5vmin;
       margin: 4px;
    }
 }

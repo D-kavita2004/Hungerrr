@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./components/Home";
-import About from "./components/About";
+// import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
 import HeaderComponent from "./components/HeaderComponent";
 import Mycart from "./components/MyCart";
@@ -24,15 +24,14 @@ const AppLayout = ()=>{
    )
 }
 const AppRouterComponent = () =>{
-   const Grocery = lazy(()=>import("./components/Grocery"));
+   const Contact = lazy(()=>import("./components/Contact"));
    return(
       <BrowserRouter>
          <Routes>
             <Route path="/" element={<AppLayout/>} >
                <Route path="/" element={<Home/>}></Route>
                <Route path="/Home" element={<Home/>}></Route>
-               <Route path="/About" element={<About/>}></Route>
-               <Route path="/Grocery" element={<Suspense fallback={<h2>Loading.....</h2>}><Grocery/></Suspense>}></Route>
+               <Route path="/Contact" element={<Suspense fallback={<h2>Loading.....</h2>}><Contact/></Suspense>}></Route>
                <Route path="/My-Cart" element={<Mycart/>}></Route>
                <Route path="/Restaurents/:resId" element={<ResMenu/>}></Route>
             </Route>
