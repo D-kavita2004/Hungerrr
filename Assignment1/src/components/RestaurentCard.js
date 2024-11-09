@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faStar } from "@fortawesome/free-solid-svg-icons";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
 import { CARD_IMAGE_URL } from "../utils/constants";
 import "../styles/RestaurentCard.css";
 
@@ -36,4 +36,19 @@ cloudinaryImageId}  alt="photo"/>
       </div>
    )
 }
-export default RestaurentCard;
+
+//HOC  ---> higher order component for adding label on the cards
+const withPromotedCard = (Component)=>{
+   return (props)=>{
+      const {promoted} = props.resData;
+      // console.log(promoted);
+      return(
+         <>
+            {promoted && <label className="promoted-label">Promoted</label>}
+            <Component {...props}/>
+         </>
+      )
+   }
+}
+
+export const MyCard = withPromotedCard(RestaurentCard);

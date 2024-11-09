@@ -56,98 +56,9 @@
    height: 170px;
    border-radius: 20px;
 }
-.item-container{
-   height: 140px;
-   width: 100%;
-   /* background-color: brown; */
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin: 10px;
-   padding: 7px;
-   border: 2px solid black;
-   border-radius: 20px;
+.category-container{
+   background-color:rgb(228, 218, 218);
 }
-.item-text{
-   height: 100%;
-   width: 70%;
-   display: flex;
-   justify-content: space-evenly;
-   align-items: left;
-   flex-direction: column;
-}
-.item-text > *{
-   font-weight: bold;
-}
-.item-image{
-   height: 120px;
-   width: 120px;
-   border-radius: 10px;
-}
-.item-pic{
-   width: 100%;
-   height: 100%;
-   border-radius: 10px;
-}
-.cart-btn{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
-   height: 4.1vmin;
-   padding: 10px;
-   padding-left: 12px;
-   padding-right: 12px;
-   bottom: 30px;
-   left: 40px;
-   font-weight: bolder;
-   background-color: rgb(151, 245, 10);
-   border-radius: 7px;
-}
-.category-title{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin-bottom: 20px;
-}
-.category{
-   margin-bottom: 13px;
-}
-.angleUp{
-   font-size: larger;
-}
-.angleDown{
-   font-size: larger;
-   display: none;
-}
-.arrows{
-   display: flex;
-   justify-content: right;
-   align-items: center;
-   
-}
-.popUp {
-   position: fixed;
-   top: 20%;
-   left: 50%;
-   transform: translateX(-50%); /* Centers the pop-up horizontally */
-   background-color: rgb(60, 252, 60);
-   width: 20vw;  /* Make it 30% of the viewport width */
-   max-width: 200px; 
-   padding: 10px;
-   text-align: center;
-   border-radius: 5px;
-   box-shadow: 4px 0px 4px 0px rgba(212, 205, 205, 0.562);
-   transition: opacity 0.5s ease;
-   opacity: 1;
-   z-index: 9999;
-   font-size: larger;
-   font-weight: bolder; 
-}
-
-
-
-
 
 @media (max-width:800px) {
    #res-menu{
@@ -159,11 +70,5 @@
    .res-pic{
       width: 130px;
       height: 130px;
-   }
-   .popUp{
-      width: 55vw;
-      max-width: 400px;
-      padding-left: 10px;
-      padding-right: 10px;
    }
 }

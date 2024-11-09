@@ -1,15 +1,17 @@
-import RestaurentCard from "./RestaurentCard";
+import { MyCard } from "./RestaurentCard";
 import cardDataList from "../utils/MockData";
 import { useEffect,useState } from "react";
 import ShimmerUI from "./shimmerUI";
 import "../styles/RestaurentArea.css";
 import {Link} from "react-router-dom";
-
+// import { useContext } from "react";
+// import { userContext } from "../ContextAPI/UserContextProvider";
 
 const RestaurentArea = ()=>{
   const [ListOfRestaurents , setListOfRestaurents] = useState([]);
   const [UpdateList, setUpdateList] = useState([]);
   const [SearchText,setSearchText] = useState("");
+  // const {setUserName,UserName} = useContext(userContext);
 
   useEffect(() => {
     setListOfRestaurents(cardDataList);
@@ -95,6 +97,10 @@ const RestaurentArea = ()=>{
                       <input type="text"  placeholder="Restaurants, cuisines" value={SearchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
                       <button id="search-btn" onClick={search}>Search</button>
                 </div>
+                {/* <div id="search">
+                    <lable>UserName : </lable>
+                      <input type="text"  placeholder="Enter user Name" value={UserName} onChange={(e)=>{setUserName(e.target.value)}}></input>
+                </div> */}
                 <div className="filter-me">
                       <div id="pure-veg">
                             <button className="filter" onClick={pureVegRes}>Pure Veg</button>
@@ -110,9 +116,9 @@ const RestaurentArea = ()=>{
         <div id="res-container">
             {
              (ListOfRestaurents.length)===0 ? 
-             (<ShimmerUI/>):(UpdateList.map((res,index)=>{
+             (<ShimmerUI />):(UpdateList.map((res,index)=>{
               return (
-                <Link id="cardLink" to = {"/Restaurents/" + res.info.id}  key={res.info.id} ><RestaurentCard resData={res.info}/></Link>
+                <Link id="cardLink" to = {"/Restaurents/" + res.info.id}  key={res.info.id} ><MyCard resData={res.info}/></Link>
               )
               }) )             
             }

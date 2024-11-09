@@ -4,7 +4,7 @@ Home
    -HeaderComponent
    -BodyComponent
       -MainHeading
-      -RestaurentArea
+      -RestaurentArea 
          -RestaurentContainer
             -Carts
                -img-container

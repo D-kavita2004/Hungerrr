@@ -31,6 +31,11 @@
    width: 10vmin;
    height: 7vmin;
 }
+.cartcount{
+   position: relative;
+   left: 55px;
+   top: 4px;
+}
 #menu{
    display: none;
 }

@@ -2,13 +2,24 @@ import "../styles/MyCart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash,faCheckDouble } from "@fortawesome/free-solid-svg-icons";
 import { CARD_IMAGE_URL } from "../utils/constants";
-import { CartContext } from "./CartContext";
-import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { removeItem } from "../Store/cartSlice";
+import { useEffect } from "react";
+import { clearCart } from "../Store/cartSlice";
 
 const Mycart = ()=>{
    const navigate = useNavigate();
-   const {cartItems,removeFromCart} = useContext(CartContext);
+   const dispatch = useDispatch();
+
+   const cartItems = useSelector((store)=>store.cart.cartItems);
+
+   useEffect(() => {
+      localStorage.setItem("cart", JSON.stringify(cartItems));
+   }, [cartItems]); // This effect runs whenever cartItems changes
+
    const [Show,setShow] = useState(false);
 
    const orderPopUp = ()=>{
@@ -25,6 +36,7 @@ const Mycart = ()=>{
       setTimeout(()=>{
          navigate("/Home");
       },3010);
+      dispatch(clearCart());
    }
 
    let totalPrice = 0;
@@ -54,7 +66,7 @@ const Mycart = ()=>{
                                  <td>{extraInfo.restaurent}</td>
                                  <td>{extraInfo.quantity}</td>
                                  <td>{(price/100)*extraInfo.quantity}</td>
-                                 <td><FontAwesomeIcon onClick={()=>{removeFromCart(id)}} icon={faTrash} style={{color: "#eb1e28",}} /></td>
+                                 <td><FontAwesomeIcon onClick={()=>{dispatch(removeItem(id))}} icon={faTrash} style={{color: "#eb1e28",}} /></td>
                               </tr>
                            )
                         })}
@@ -73,7 +85,7 @@ const Mycart = ()=>{
                            </div>
                            <div className="bc" id="pay-amt" >
                                  <div className="ques">Payable Amount:</div>
-                                 <div className="ans" >{totalPrice + Number((0.18*totalPrice).toFixed(2))}</div>
+                                 <div className="ans" >{(totalPrice + Number((0.18*totalPrice))).toFixed(2)}</div>
                            </div>
                      </div>
                      <button className="place-order-btn" onClick={orderPopUp}>Place Order</button>
